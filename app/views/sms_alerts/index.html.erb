@@ -1,0 +1,14 @@
+<div class="min-h-screen flex items-start justify-center mt-8">
+  <div class="w-1/4 pr-4">
+    <div class="bg-blue-100 p-4 mb-4 rounded-none shadow-md flex flex-col items-center text-center">
+      <div class="mb-4">
+        <%= image_tag "user-icon.png", alt: "User Image", class: "mb-2 rounded-full w-16 h-16 mx-auto" %>
+        <p><strong>Name:</strong> <%= current_user.name %></p>
+      </div>
+      <div class="flex items-center justify-center space-x-4">
+        <%= link_to "Edit", edit_user_registration_path, class: 'btn btn-warning' %>
+        <%= button_to "Send Sms Alert", send_sms_path(msg: SUCCESS_MESSAGE), class: 'btn btn-primary', method: :post %>
+      </div>
+    </div>
+  </div>
+</div>

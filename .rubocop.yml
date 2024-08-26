@@ -1,0 +1,138 @@
+require:
+  - rubocop-performance
+  - rubocop-rails
+
+AllCops:
+  SuggestExtensions: false
+  TargetRubyVersion: 3.1.3
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+
+Rails/UnknownEnv:
+  Environments:
+    - production
+    - development
+    - test
+    - qa
+    - qa_test
+
+Performance:
+  Exclude:
+    - '**/spec/**/*'
+
+Metrics/ClassLength:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - lib/**/*
+
+Layout/LineLength:
+  Max: 120
+
+Style/Documentation:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Style/ClassAndModuleChildren:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Metrics/MethodLength:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Metrics/PerceivedComplexity:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Naming/MemoizedInstanceVariableName:
+  Exclude:
+    - app/**/*
+
+Metrics/AbcSize:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Documentation:
+  Enabled: false
+
+# Disable block length check in specs
+Metrics/BlockLength:
+  Exclude:
+    - bin/**/*
+    - config/**/*
+    - db/**/*
+    - node_modules/**/*
+    - spec/**/*
+    - tmp/**/*
+    - vendor/**/*
+    - test/**/*
+    - app/**/*
+    - lib/**/*
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
+Rails/HelperInstanceVariable:
+  Enabled: false
+
+Style/Documentation:
+  Enabled: false

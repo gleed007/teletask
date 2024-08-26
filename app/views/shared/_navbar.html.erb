@@ -1,0 +1,10 @@
+<nav class="bg-blue-300 p-4 flex justify-between items-center">
+  <div class="flex items-center">
+    <span class="text-white font-bold text-xl">
+      <%= image_tag("app-logo.png", alt: "Logo", class: "h-8 w-8 mr-2") %>
+    </span>
+  </div>
+  <div class="flex items-center space-x-4">
+    <%= button_to "Sign out", destroy_user_session_path, style: 'all: unset', class: 'nav-link', method: :delete %>
+  </div>
+</nav>

@@ -1,0 +1,109 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+
+ */
+ @keyframes slideAlertIn {
+  0% {
+    transform: translateY(calc(100% + 50px));
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+ body {
+  margin: 0;
+}
+
+.alert {
+  background-color: #d9534f;
+}
+
+.notice {
+  background-color: #5cb85c;
+  padding: 15px;
+}
+
+.w-full.max-w-md {
+  margin-top: 40px;
+}
+
+.notification {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+.notice {
+  background-color: #dff0d8;
+  color: #3c763d;
+}
+
+#notice-container {
+  z-index: 99999;
+}
+
+#notice-container-top {
+  position: absolute;
+  top: 30%;
+  left: 33%;
+  z-index: 15;
+  z-index: 99999;
+}
+
+p.top_notice {
+  position: absolute;
+  width: max-content;
+  padding: 60px;
+  background: #ffff;
+  color: #000;
+  display: inline-block;
+  font-weight: bold;
+  box-shadow:0 0 0 1600px rgba(0,0,0,0.45);
+}
+
+@media (max-width:1023px) and (min-width:700px) {
+  #notice-container-top {
+    left: 22%;
+  }
+  p.top_notice {
+    padding: 40px;
+  }
+};
+
+p.notice, p.alert {
+  margin: 0 0 10px 0;
+  padding: 1.25rem;
+  background: rgba(#123794, 0.75);
+  color: #fff;
+  animation: 1s ease-out 0s 1 slideAlertIn;
+  display: inline-block;
+  float: right;
+  clear: right;
+  z-index: 1000;
+  position: relative;
+
+  &.fade-out {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 2s, opacity 2s linear;
+  }
+
+  &.fixed-notice {
+    position: fixed;
+    bottom: 1.56rem;
+    right: 1.56rem;
+  }
+}
